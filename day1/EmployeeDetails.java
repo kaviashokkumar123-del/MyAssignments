@@ -6,7 +6,7 @@ public class EmployeeDetails {
 		// TODO Auto-generated method stub
 		String name = "John Doe";
 		int age = 30;
-		float salary = 55000.75f;
+		double salary = 55000.75;
 		char gender = 'M';
 		boolean acceptTerms = true;
 		float rating = 4.5f;
