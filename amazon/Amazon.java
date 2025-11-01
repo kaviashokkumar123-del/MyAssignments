@@ -48,7 +48,7 @@ public class Amazon {
 		//get the title
 		String title = driver.getTitle();
 		System.out.println("The title of the page is :"+title);
-		driver.close();
+		driver.quit();
 	}
 
 }
