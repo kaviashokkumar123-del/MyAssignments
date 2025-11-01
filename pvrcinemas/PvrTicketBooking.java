@@ -78,7 +78,7 @@ public class PvrTicketBooking {
 		String get_title = driver.getTitle();
 		System.out.println("The Title of the page is: " + get_title);
 		// close the browser
-		driver.close();
+		driver.quit();
 	}
 
 }
