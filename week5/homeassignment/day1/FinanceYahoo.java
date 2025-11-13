@@ -34,7 +34,7 @@ public class FinanceYahoo {
 		ac.moveToElement(more).pause(Duration.ofSeconds(1)).moveToElement(crypto).pause(Duration.ofSeconds(1))
 				.moveToElement(crypto).click().build().perform();
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		// Get crypto elements
 		List<WebElement> crypto_Names = driver
 				.findElements(By.xpath("//table[@class='yf-14a4l34 bd']/tbody/tr/td[2]/div"));
@@ -42,5 +42,7 @@ public class FinanceYahoo {
 			String names_Cryto = names.getText();
 			System.out.println(names_Cryto);
 		}
+		driver.quit();
 	}
 }
+
