@@ -23,7 +23,10 @@ public class FinanceYahoo {
 		// implict wait=
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		Thread.sleep(5000);
+		//refresh the page since the elements are loading only after refresh
+		driver.navigate().refresh();
+		
+		Thread.sleep(15000);
 		// mouse hover more
 		WebElement more = driver.findElement(By.xpath("//span[text()='More']"));
 		Actions ac = new Actions(driver);
@@ -34,7 +37,7 @@ public class FinanceYahoo {
 		ac.moveToElement(more).pause(Duration.ofSeconds(1)).moveToElement(crypto).pause(Duration.ofSeconds(1))
 				.moveToElement(crypto).click().build().perform();
 
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		// Get crypto elements
 		List<WebElement> crypto_Names = driver
 				.findElements(By.xpath("//table[@class='yf-14a4l34 bd']/tbody/tr/td[2]/div"));
@@ -45,4 +48,5 @@ public class FinanceYahoo {
 		driver.quit();
 	}
 }
+
 
